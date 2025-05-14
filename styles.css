@@ -1,0 +1,60 @@
+
+
+/* styles.css */
+
+/* 1) Reset & make body fill viewport */
+html, body {
+  margin: 0;
+  height: 100vh;
+}
+
+/* 2) Grid layout: header (auto), main (1fr), footer (auto) */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #8CD2F4;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* 3) Center the iframe in the middle row */
+.center-container {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4) iframe at its natural size */
+.puzzle-frame {
+  width: 1080px;
+  height: 1080px;
+  border: none;
+  display: block;
+}
+
+/* 5) Button styles + click animation */
+.animated-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.animated-button:hover {
+  background-color: #0056b3;
+}
+
+.animated-button:active {
+  animation: clickPop 0.3s ease;
+}
+
+@keyframes clickPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
