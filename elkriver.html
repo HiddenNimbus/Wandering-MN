@@ -19,38 +19,32 @@
       height="1080">
     </iframe>
   </div>
-  <footer>
-      <button id="done" class="animated-button">Done!</button>
-    <button class="animated-button" onclick="location.href='index.html'">
-     2002
-    </button>
-  </footer>
-   <div id="panel" class="panel">
-    <button id="close-panel" class="close-btn">&times;</button>
-    <div class="panel-content">
-      <h2>Congrats!</h2>
-      <p>Moved to Elk river 2018 right After graduating college, can't lie didn't like the area very much not many poc in sight.<br>
-        Worked at a Nike a couple towns over.<br>
-        Eventually got tired of that and worked at a Liquor store but that got.... depressing.Eventually I found a skatepark and thats keeping me sane here. 
-      </p>
-     
-    </div>
-  </div>
+ <!-- index.html (snippet) -->
+<footer>
+  <button id="done" class="animated-button">Done!</button>
+  <button class="animated-button" onclick="location.href='index.html'">
+    2002
+  </button>
+</footer>
 
-  <script>
-  
-    document
-      .getElementById('done')
-      .addEventListener('click', () => {
-        document.getElementById('panel')
-                .classList.add('open');
-      });
-    document
-      .getElementById('close-panel')
-      .addEventListener('click', () => {
-        document.getElementById('panel')
-                .classList.remove('open');
-      });
-  </script>
+<div id="panel" class="panel">
+  <button id="close-panel" class="close-btn">&times;</button>
+  <div class="panel-content">
+    <h2>Congrats!</h2>
+    <p>…your text here…</p>
+  </div>
+</div>
+
+<script>
+  // Show panel
+  document.getElementById('done').addEventListener('click', () => {
+    document.getElementById('panel').classList.add('open');
+  });
+  // Hide panel
+  document.getElementById('close-panel').addEventListener('click', () => {
+    document.getElementById('panel').classList.remove('open');
+  });
+</script>
+
 </body>
 </html>
