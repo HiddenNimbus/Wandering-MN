@@ -27,5 +27,26 @@
      2009
     </button>
   </footer>
+   <div id="panel" class="panel">
+  <button id="close-panel" class="close-btn">&times;</button>
+  <div class="panel-content">
+    <h2>Congrats!</h2>
+    <p>Moved to our First House in Flake 2005,We'd spend hours in the Washington County Library.<br />
+      First place I learned how to ride a bike, kid from the neighborhood taught me and we road to his place.<br />
+      It was the first proper house we had and what young me would consider the tradional american idea of home.<br />
+    </p>
+  </div>
+</div>
+
+<script>
+
+  document.getElementById('done').addEventListener('click', () => {
+    document.getElementById('panel').classList.add('open');
+  });
+
+  document.getElementById('close-panel').addEventListener('click', () => {
+    document.getElementById('panel').classList.remove('open');
+  });
+</script>
 </body>
 </html>
