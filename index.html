@@ -37,18 +37,44 @@
     <p>Lake City was aa unique place my folks owned a group home and my parents were very busy managing patients<br />
       I remeber sitting around the home watching Space Jam on vhs.
     </p>
+ <input
+        id="passcode-input"
+        type="password"
+        placeholder="Enter passcode"
+        class="passcode-input">
+      <button id="check-passcode" class="animated-button">Check</button>
+
+   
+      <p id="passcode-feedback" class="feedback"></p>
+    </div>
   </div>
-</div>
 
-<script>
+  <script>
+    const SECRET = 'Oluwa';  
 
-  document.getElementById('done').addEventListener('click', () => {
-    document.getElementById('panel').classList.add('open');
-  });
+    document.getElementById('done').addEventListener('click', () => {
+      document.getElementById('panel').classList.add('open');
+    });
 
-  document.getElementById('close-panel').addEventListener('click', () => {
-    document.getElementById('panel').classList.remove('open');
-  });
-</script>
+    document.getElementById('close-panel').addEventListener('click', () => {
+      document.getElementById('panel').classList.remove('open');
+    });
+
+    document.getElementById('check-passcode').addEventListener('click', () => {
+      const input = document.getElementById('passcode-input').value;
+      const feedback = document.getElementById('passcode-feedback');
+      const nextBtn = document.getElementById('next-page');
+
+      if (input === SECRET) {
+        feedback.textContent = 'Correct! Next page unlocked.';
+        feedback.style.color = 'green';
+        nextBtn.style.display = 'inline-block';
+      } else {
+        feedback.textContent = 'Wrong passcode. Try again.';
+        feedback.style.color = 'red';
+        nextBtn.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
