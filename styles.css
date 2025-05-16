@@ -19,15 +19,22 @@ body {
 
 .center-container {
   position: relative;
-  width: 100%;            
-  max-width: 500px;       
-  padding-top: 104.17%;     
-  margin: 0 auto;         
+  /* 1. Pick the smallest of:
+       – a hard max (500px here)  
+       – 90% of the viewport width  
+       – the width that yields a height of (100vh – reserved space) */
+  width: min(
+    500px,                  /* your desktop max */
+    90vw,                   /* 90% of screen width */
+    calc((100vh - 6em) * (1080/1125)) /* so height ≤ (100vh − 6em) */
+  );
+  margin: 2em auto;        /* center & give some breathing room */
+  padding-top: 104.17%;    /* = (1125/1080)*100% to lock the real aspect ratio */
   overflow: hidden;
 }
 
 .center-container iframe {
-   position: absolute;
+  position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
