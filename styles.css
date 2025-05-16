@@ -58,3 +58,43 @@ body {
   50%  { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
+
+/* styles.css (append these at the end) */
+
+/* 1. Panel container: fixed off the right edge */
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;                /* start hidden */
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 8px rgba(0,0,0,0.2);
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  z-index: 100;
+  padding: 20px;
+}
+
+/* 2. When “open” class is added, widen it */
+.panel.open {
+  width: 300px;            /* adjust as desired */
+}
+
+/* 3. Close button in top-right of panel */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 4. Panel content styling */
+.panel-content {
+  margin-top: 40px;        /* make room for the close button */
+}
+
