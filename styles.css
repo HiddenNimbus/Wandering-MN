@@ -23,7 +23,7 @@ body {
   position: relative;
  
   width:90vw;
-  max-width:500px;
+  max-width:1080px;
   margin: 2em auto;
   aspect-ratio: 1080 / 1125;
   padding-top:0;    /* = (1125/1080)*100% to lock the real aspect ratio */
