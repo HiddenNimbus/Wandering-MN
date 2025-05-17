@@ -11,6 +11,7 @@ html, body {
 
 body {
   display: grid;
+  grid-template-columns: 1fr; 
   grid-template-rows: auto 1fr auto;
   background-color: #8CD2F4;
   font-family: sans-serif;
